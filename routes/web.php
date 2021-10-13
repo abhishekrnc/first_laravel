@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\readingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,6 @@ Route::get('/', function () {
 Route::get('/about', function() {   //here about is the page route
     return view('aboutus');          //here abourus is the page name to which the route has to open it
 });
+
+Route::get('/reading', [ReadingController::class, 'index']);
+
